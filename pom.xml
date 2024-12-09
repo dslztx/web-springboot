@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <groupId>me.dslztx.study</groupId>
+    <artifactId>web-springboot</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <me.dslztx.lombok.version>1.18.22</me.dslztx.lombok.version>
+        <me.dslztx.slf4j.version>1.7.30</me.dslztx.slf4j.version>
+        <me.dslztx.junit.version>4.13.1</me.dslztx.junit.version>
+        <me.dslztx.mockito.version>2.20.0</me.dslztx.mockito.version>
+
+        <me.dslztx.springboot.version>2.3.0.RELEASE</me.dslztx.springboot.version>
+
+        <plugin-compiler.version>3.0</plugin-compiler.version>
+        <plugin-compiler.compile.encoding>UTF-8</plugin-compiler.compile.encoding>
+        <plugin-compiler.compile.source.version>1.8</plugin-compiler.compile.source.version>
+        <plugin-compiler.compile.target.version>1.8</plugin-compiler.compile.target.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${me.dslztx.lombok.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${me.dslztx.slf4j.version}</version>
+        </dependency>
+
+        <!--for test-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${me.dslztx.junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${me.dslztx.mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${me.dslztx.springboot.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jetty</artifactId>
+            <version>${me.dslztx.springboot.version}</version>
+        </dependency>
+    </dependencies>
+</project>
